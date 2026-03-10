@@ -6,10 +6,38 @@
 <title>Home - St. Mary Convent School</title>
 <link rel="stylesheet" href="style.css">
 <style>
-      .principal h2 {
-        text-align: center;
-      }
+          .principal h2{
+      text-align: center;
+    }  
+    .slider-text{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  color:white;
+  z-index:5;
+   /* semi-transparent dark blue */
+  padding:20px 30px;
+  border-radius:10px;
+
+  /* transition for smooth fade if needed */
+  opacity:1;
+}
+
+.slider-text h1{
+  font-size:40px;
+  margin-bottom:5px;
+}
+
+.slider-text p{
+  font-size:20px;
+  margin-top:5px;
+  color:#FFD700; /* highlight */
+}
+   
   @media(max-width:600px){
+   
        ul{
         text-align: left;
     }
@@ -17,13 +45,27 @@
       text-align: center;
     }
     .box{
+  
       border: 2px solid rgb(144, 144, 172);
       margin-top: 9px;
       border-radius: 30px;
+      padding: 10px 15px 10px 15px;
     }
     h3{
       margin-bottom: 0px;
     }
+    .slider-text{
+    width:70%;
+    padding:10px;
+  }
+
+  .slider-text h1{
+    font-size:24px;
+  }
+
+  .slider-text p{
+    font-size:16px;
+  }
   }
 </style>
 </head>
@@ -61,6 +103,11 @@
 
 <!-- SLIDER -->
 <div class="slider">
+  <div class="slider-text">
+    <h1>Welcome</h1>
+    <p>St. Mary Convent School</p>
+  </div>
+
 <div class="slide slide1"></div>
 <div class="slide slide2"></div>
 <div class="slide slide3"></div>
@@ -80,7 +127,7 @@ We focus on academic excellence, moral values, and co-curricular activities to b
 <p>Our Mission: Creating responsible, innovative, and confident individuals ready to face the world.</p>
 </section>
 <section class="why">
-<h2 >Why Choose Our School</h2>
+<h2>Why Choose Our School</h2>
 
 <div class="why-box" >
 
@@ -90,18 +137,18 @@ We focus on academic excellence, moral values, and co-curricular activities to b
 </div>
 
 <div class="box">
-<h3 class="reveal-right">Experienced Teachers</h3>
+<h3 class="reveal-left">Experienced Teachers</h3>
 <p >Our teachers are dedicated to helping students reach their full potential.</p>
 </div>
 
-<div class="box" >
+<div class="box">
 <h3 class="reveal-left">Modern Infrastructure</h3>
-<p >Smart classrooms, science labs, computer labs, and library facilities.</p>
+<p>Smart classrooms, science labs, computer labs, and library facilities.</p>
 </div>
 
 <div class="box">
-<h3 class="reveal-right">Extra Activities</h3>
-<p >Sports, cultural programs, competitions, and personality development.</p>
+<h3 class="reveal-left">Extra Activities</h3>
+<p>Sports, cultural programs, competitions, and personality development.</p>
 </div>
 
 </div>
@@ -151,9 +198,11 @@ environment where students can grow into confident and responsible citizens.
 <footer>
 <p>© 360-Complete Solution</p>
 </footer>
+
 <a class="whatsapp" href="https://wa.me/917480982980" target="_blank">
-<img src="https://tse4.mm.bing.net/th/id/OIP.w732hUJqOiD7kDXDaW_aQAHaHa?w=626&h=626&rs=1&pid=ImgDetMain&o=7" 
-alt="WhatsApp Chat">
+  <img src="https://tse4.mm.bing.net/th/id/OIP.w732hUJqOiD7kDXDaW_aQAHaHa?w=626&h=626&rs=1&pid=ImgDetMain&o=7" 
+       alt="WhatsApp Chat" 
+       style="width: 50px; height: 40px;">
 </a>
 
 <script>
@@ -207,7 +256,5 @@ reveals[i].classList.remove("active");
 window.addEventListener("scroll",reveal);
 
 </script>
-
-
 </body>
 </html>
