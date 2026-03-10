@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admission - St. Mary Convent School</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* MOBILE */
+@media(max-width:600px){
+    nav ul{
+        display:none;
+    }
+    .menu-btn{
+        display:block;
+        color:white;
+    }
+
+    header{
+        padding:15px 20px;
+    }
+
+    h2{
+        font-size:24px;
+    }
+
+    h3{
+        font-size:20px;
+        margin-bottom: 20px;
+    }
+ .school-name{
+    font-size:18px;
+  }
+     ul {
+        text-align: left;
+        margin-left: 20%;
+    }
+
+    section{
+        padding:40px 15px;
+        text-align: center;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+      .slider{
+    height:200px; /* smaller height on mobile */
+  }
+}
+
+
+
+
+</style>
+<style>
+  /* SCROLL ANIMATION */
+
+.reveal-left,
+.reveal-right{
+opacity:0;
+transition:all 0.8s ease;
+}
+
+.reveal-left{
+transform:translateX(-80px);
+}
+
+.reveal-right{
+transform:translateX(80px);
+}
+
+.reveal-left.active,
+.reveal-right.active{
+opacity:1;
+transform:translateX(0);
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">
+    <img src="image.png" alt="School Logo">
+    <div class="school-name">St. Mary Convent School</div>
+  </div>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="admission.html">Admission</a></li>
+<li><a href="notice.html">Notice</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="facilities.html">Facilities</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<div class="menu-btn" onclick="openMenu()">☰</div>
+</header>
+
+<div class="mobile-menu" id="menu">
+<a href="index.html" onclick="closeMenu()">Home</a>
+<a href="about.html" onclick="closeMenu()">About</a>
+<a href="admission.html" onclick="closeMenu()">Admission</a>
+<a href="notice.html" onclick="closeMenu()">Notice</a>
+<a href="gallery.html" onclick="closeMenu()">Gallery</a>
+<a href="facilities.html" onclick="closeMenu()">Facilities</a>
+<a href="contact.html" onclick="closeMenu()">Contact</a>
+</div>
+
+<section>
+<h2>Admissions Open 2025-26</h2>
+
+<p>We welcome applications from students who are enthusiastic to learn and grow. Please read the instructions carefully before submitting the admission form.</p>
+
+<h3>Eligibility</h3>
+<p>Admissions are open for classes Nursery to Grade 12. Age criteria and prior qualifications may apply.</p>
+
+<h3 >Documents Required</h3>
+<ul>
+<li>Birth Certificate</li>
+<li>Previous School Report (if applicable)</li>
+<li>Passport Size Photographs of the student and parent</li>
+<li>Address Proof</li>
+</ul>
+
+<h3 >How to Apply</h3>
+<p >Fill out the online admission form below. Our administration will contact you with further instructions.</p>
+
+<form class="reveal-right">
+<input type="text" placeholder="Student Name" required>
+<input type="text" placeholder="Class Applying For" required>
+<input type="text" placeholder="Parent Name" required>
+<input type="tel" placeholder="Phone Number" required>
+<textarea placeholder="Address" required></textarea>
+<button type="submit">Submit Application</button>
+</form>
+
+</section>
+
+<footer>
+<p>© 360-Complete Solution</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917480982980">💬</a>
+
+<script>
+function openMenu(){ document.getElementById("menu").style.right="0"; }
+function closeMenu(){ document.getElementById("menu").style.right="-260px"; }
+</script>
+<script>
+
+function reveal(){
+
+let reveals = document.querySelectorAll(".reveal-left, .reveal-right");
+
+for(let i=0;i<reveals.length;i++){
+
+let windowHeight = window.innerHeight;
+let elementTop = reveals[i].getBoundingClientRect().top;
+let visiblePoint = 120;
+
+if(elementTop < windowHeight - visiblePoint){
+reveals[i].classList.add("active");
+}else{
+reveals[i].classList.remove("active");
+}
+
+}
+
+}
+
+window.addEventListener("scroll",reveal);
+
+</script>
+</body>
+</html>

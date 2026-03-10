@@ -1,0 +1,391 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    line-height:1.6;
+    background:#f9f9f9;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:#0a2a66;
+    color:white;
+    position:relative;
+    z-index:1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    height:50px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    padding:5px 10px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    background: rgba(255,255,255,0.2);
+    border-radius:5px;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-260px;
+    width:260px;
+    height:100%;
+    background:#0a2a66;
+    padding:40px 20px;
+    transition:0.4s;
+    z-index:2000;
+}
+
+.mobile-menu a{
+    display:block;
+    color:white;
+    margin:20px 0;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.mobile-menu a:hover{
+    color:#FFD700;
+}
+
+/* SLIDER (Home page only) */
+.slider{
+   
+  height:400px;
+  position:relative;
+  overflow:hidden;
+  border-radius:8px;
+  margin-bottom:20px;
+}
+
+.slider .slide{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-size:cover;   /* cover full slider area */
+  background-position:center;
+  transition:opacity 1s ease-in-out;
+  opacity:0;               /* initially hidden */
+}
+
+.slider .slide1{
+  background-image: url("https://tse2.mm.bing.net/th/id/OIP.gAH8s7NkdOboaSv5cFjbRwHaE7?w=800&h=533&rs=1&pid=ImgDetMain&o=7&rm=3");
+  opacity:1; /* first slide visible initially */
+}
+
+.slider .slide2{
+  background-image: url("https://3.imimg.com/data3/NX/EU/MY-2/paramedical-and-nursing-degree-courses-1000x1000.jpg");
+}
+
+.slider .slide3{
+  background-image: url("https://www.joonsquare.com/usermanage/image/business/karan-public-school-meerut-1747/karan-public-school-meerut-karan-1.jpg");
+}
+.slider .slide4{
+  background-image: url("https://eastindiantraveller.com/wp-content/uploads/2021/05/jiranga31.jpeg?w=580");
+}
+
+.slider .slide5{
+  background-image: url("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/3a/b9/ba/s-kumar-999-resort.jpg?w=500&h=-1&s=1");
+}
+
+
+/* SECTIONS */
+section{
+    padding:60px 20px;
+    max-width:1100px;
+    margin:auto;
+    background:white;
+    margin-bottom:20px;
+    border-radius:8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2{
+    margin-bottom:20px;
+    color:#0a2a66;
+    font-size:28px;
+}
+
+h3{
+    margin-top: 15px;
+    margin-bottom:10px;
+    color:#0a2a66;
+    font-size:22px;
+}
+.school-name{
+    font-size:28px;
+  }
+p{
+    margin-bottom:15px;
+    line-height:1.8;
+    font-size:16px;
+}
+
+ul{
+    margin-left:20px;
+    margin-bottom:15px;
+}
+
+ul li{
+    margin-bottom:8px;
+    font-size:16px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#f4f4f4;
+    padding:20px;
+    border-radius:8px;
+    text-align:center;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* GALLERY */
+.gallery-img{
+    width:100%;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+.gallery-img:hover{
+    transform:scale(1.05);
+}
+
+/* FORM */
+form{
+    display:grid;
+    gap:15px;
+    margin-top:15px;
+}
+
+input,textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+    width:100%;
+    transition:0.3s;
+}
+
+input:focus,textarea:focus{
+    outline:none;
+    border-color:#0a2a66;
+    box-shadow:0 0 5px rgba(10,42,102,0.5);
+}
+
+button{
+    padding:12px;
+    background:#0a2a66;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-size:16px;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#06407a;
+}
+
+/* FOOTER */
+footer{
+    background:#0a2a66;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+    font-size:16px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#faf8ff;
+    padding:8px;
+    border-radius:50%;
+    text-decoration:none;
+    box-shadow:0 4px 6px rgba(0,0,0,0.2);
+    z-index:9999;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
+}
+.whatsapp img{
+width:45px;
+height:45px;
+display:block;
+}
+/* MOBILE */
+@media(max-width:600px){
+    nav ul{
+        display:none;
+    }
+    .menu-btn{
+        display:block;
+        color:white;
+    }
+
+    header{
+        padding:15px 20px;
+    }
+
+    h2{
+        font-size:24px;
+    }
+
+    h3{
+        font-size:20px;
+    }
+ .school-name{
+    font-size:18px;
+  }
+    p, ul li, input, textarea, button{
+        font-size:15px;
+    }
+
+    section{
+        padding:40px 15px;
+        text-align: center;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+      .slider{
+    height:200px; /* smaller height on mobile */
+  }
+}
+
+
+/* PRINCIPAL SECTION */
+
+.principal{
+padding:60px 10%;
+background:#f5f5f5;
+}
+
+.principal-container{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.principal-text{
+flex:1;
+}
+
+.principal-text h2{
+margin-bottom:10px;
+}
+
+.principal-text p{
+margin-bottom:15px;
+line-height:1.6;
+}
+
+.principal-image{
+flex:1;
+text-align:center;
+}
+
+.principal-image img{
+width:100%;
+max-width:350px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:768px){
+
+.principal-container{
+flex-direction:column;
+text-align:left;
+}
+
+.principal-image img{
+max-width:250px;
+margin:10px 0px;
+}
+
+}
+
+
+
+
+.reveal-left,
+.reveal-right{
+opacity:0;
+transition:all 0.8s ease;
+}
+
+.reveal-left{
+transform:translateX(-80px);
+}
+
+.reveal-right{
+transform:translateX(80px);
+}
+
+.reveal-left.active,
+.reveal-right.active{
+opacity:1;
+transform:translateX(0);
+}

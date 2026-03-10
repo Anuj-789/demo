@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - St. Mary Convent School</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* CONTACT PAGE SPECIFIC STYLES */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* CONTACT CARDS */
+.contact-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.contact-cards .card {
+  flex: 1;
+  min-width: 200px;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.contact-cards .card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-cards .card img {
+  height: 40px;
+  margin-bottom: 10px;
+  filter: invert(26%) sepia(93%) saturate(5860%) hue-rotate(203deg) brightness(95%) contrast(102%);
+  /* blue color filter */
+}
+ img{
+    margin-top: 5px;
+  }
+/* FORM */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #0a2a66;
+  box-shadow: 0 0 5px rgba(10,42,102,0.5);
+}
+
+form button {
+  background: #0a2a66;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+form button:hover {
+  background: #06407a;
+  transform: scale(1.05);
+}
+
+/* REVEAL ANIMATION LEFT & RIGHT */
+.reveal-left, .reveal-right {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease;
+}
+
+.reveal-right {
+  transform: translateX(50px);
+}
+
+.reveal-left.active, .reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* MAP */
+iframe {
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+/* SOCIAL ICONS */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  background: #0a2a66;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #06407a;
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .contact-cards {
+    flex-direction: column;
+    text-align: center;
+  }
+  form {
+    width: 100%;
+  }
+ 
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">
+    <img src="image.png" alt="School Logo">
+    <div class="school-name">St. Mary Convent School</div>
+  </div>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="admission.html">Admission</a></li>
+<li><a href="notice.html">Notice</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="facilities.html">Facilities</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<div class="menu-btn" onclick="openMenu()">☰</div>
+</header>
+
+<div class="mobile-menu" id="menu">
+<a href="index.html" onclick="closeMenu()">Home</a>
+<a href="about.html" onclick="closeMenu()">About</a>
+<a href="admission.html" onclick="closeMenu()">Admission</a>
+<a href="notice.html" onclick="closeMenu()">Notice</a>
+<a href="gallery.html" onclick="closeMenu()">Gallery</a>
+<a href="facilities.html" onclick="closeMenu()">Facilities</a>
+<a href="contact.html" onclick="closeMenu()">Contact</a>
+</div>
+
+<section>
+<h2>Contact Us</h2>
+<p>Reach out to us via phone, email, or contact form.</p>
+
+<div class="contact-cards">
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/000000/marker.png" alt="Address">
+    <p>Main Road, City Name, State, India</p>
+  </div>
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Phone">
+    <p>7480982980</p>
+  </div>
+  <div class="card">
+    <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" alt="Email">
+    <p>aknuj2378@gmail.com</p>
+  </div>
+</div>
+
+<h3 class="reveal-right">Contact Form</h3>
+<form class="reveal-right">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<input type="tel" placeholder="Phone Number" required>
+<textarea placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+
+<h3 class="reveal-left">Location</h3>
+<iframe class="reveal-left"
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.905458004688!2d90.4125238154307!3d23.810331984585593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b856c7aef5df%3A0x2c874f1a1f6177c8!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sin!4v1627383728392!5m2!1sen!2sin"
+width="100%" height="300" allowfullscreen="" loading="lazy"></iframe>
+
+<div class="social-links reveal-left">
+  <a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png"/></a>
+  <a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png"/></a>
+  <a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/30/ffffff/youtube-play.png"/></a>
+  <a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/30/ffffff/twitter.png"/></a>
+</div>
+
+</section>
+
+<footer>
+<p>© 360-Complete Solution</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917480982980">💬</a>
+
+<script>
+function openMenu(){ document.getElementById("menu").style.right="0"; }
+function closeMenu(){ document.getElementById("menu").style.right="-260px"; }
+
+/* REVEAL SCROLL ANIMATION */
+function reveal(){
+  let reveals = document.querySelectorAll(".reveal-left, .reveal-right");
+  for(let i=0;i<reveals.length;i++){
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let visiblePoint = 120;
+    if(elementTop < windowHeight - visiblePoint){
+      reveals[i].classList.add("active");
+    }else{
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+window.addEventListener("scroll",reveal);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facilities - St. Mary Convent School</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+ <div class="logo">
+    <img src="image.png" alt="School Logo">
+    <div class="school-name">St. Mary Convent School</div>
+  </div>
+<nav>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="admission.html">Admission</a></li>
+<li><a href="notice.html">Notice</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="facilities.html">Facilities</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<div class="menu-btn" onclick="openMenu()">☰</div>
+</header>
+
+<div class="mobile-menu" id="menu">
+<a href="index.html" onclick="closeMenu()">Home</a>
+<a href="about.html" onclick="closeMenu()">About</a>
+<a href="admission.html" onclick="closeMenu()">Admission</a>
+<a href="notice.html" onclick="closeMenu()">Notice</a>
+<a href="gallery.html" onclick="closeMenu()">Gallery</a>
+<a href="facilities.html" onclick="closeMenu()">Facilities</a>
+<a href="contact.html" onclick="closeMenu()">Contact</a>
+</div>
+
+<section>
+<h2>Our Facilities</h2>
+<p>St. Mary Convent School offers modern and well-equipped facilities to ensure the best learning environment for students.</p>
+
+<div class="grid">
+<div class="card">
+<h3>Smart Classrooms</h3>
+<p>Interactive smart boards, digital content, and multimedia teaching aids for better learning.</p>
+</div>
+<div class="card">
+<h3>Computer Lab</h3>
+<p>High-speed computers with internet access for coding, research, and IT education.</p>
+</div>
+<div class="card">
+<h3>Library</h3>
+<p>Extensive collection of books, e-resources, and a quiet reading environment.</p>
+</div>
+<div class="card" >
+<h3 class="reveal-left">Science Lab</h3>
+<p>Fully equipped physics, chemistry, and biology labs for hands-on learning.</p>
+</div>
+<div class="card">
+<h3 class="reveal-left">Playground</h3>
+<p>Spacious playground for sports like football, cricket, basketball, and athletics.</p>
+</div>
+<div class="card">
+<h3 class="reveal-left">Transport Facility</h3>
+<p>Safe and reliable school buses covering nearby areas for student convenience.</p>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 360-Complete Solution</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/917480982980">💬</a>
+
+<script>
+function openMenu(){ document.getElementById("menu").style.right="0"; }
+function closeMenu(){ document.getElementById("menu").style.right="-260px"; }
+</script>
+<script>
+
+function reveal(){
+
+let reveals = document.querySelectorAll(".reveal-left, .reveal-right");
+
+for(let i=0;i<reveals.length;i++){
+
+let windowHeight = window.innerHeight;
+let elementTop = reveals[i].getBoundingClientRect().top;
+let visiblePoint = 120;
+
+if(elementTop < windowHeight - visiblePoint){
+reveals[i].classList.add("active");
+}else{
+reveals[i].classList.remove("active");
+}
+
+}
+
+}
+
+window.addEventListener("scroll",reveal);
+
+</script>
+</body>
+</html>
