@@ -4,7 +4,9 @@
     box-sizing:border-box;
     font-family: Arial, sans-serif;
 }
-
+         .menu-btn,.mobile-menu a {
+  -webkit-tap-highlight-color: transparent;  /* blue highlight remove karega */
+}
 body{
     line-height:1.6;
     background:#f9f9f9;
@@ -390,3 +392,4 @@ transform:translateX(80px);
 opacity:1;
 transform:translateX(0);
 }
+
